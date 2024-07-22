@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
-import Error404 from "./components/Error404/Error404";
+import Error404 from "./pages/Error404/Error404";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 
