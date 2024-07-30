@@ -1,4 +1,6 @@
 import React from "react";
+import "./_Banner.scss";
+
 
 function Banner({ imageSrc, title }) {
   return (

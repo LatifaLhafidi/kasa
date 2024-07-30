@@ -1,0 +1,61 @@
+  .card-logement {
+    height: 340px; /* Hauteur fixe de 340px */
+    width: 100%;
+    max-width: 100%; /* Utilisation d'une largeur relative */
+    transition: 0.2s;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden; /* Assurez-vous que le dégradé ne dépasse pas la carte */
+  
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+    }
+  
+    .card-logement-text {
+      position: absolute;
+      color: white;
+      bottom: 15px;
+      left: 15px;
+      width: calc(
+        100% - 30px
+      ); /* Utilisez la largeur de la carte moins la marge */
+      z-index: 1;
+    }
+  
+    /* Assombrir le bas de la card pour que le titre ressorte mieux */
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 50%; /* Hauteur de la partie assombrie */
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+      border-radius: 10px;
+    }
+  
+   
+  }
+  
+  @media screen and (max-width: 550px) {
+   
+  
+      .card-logement {
+        height: 240px; /* Hauteur fixe de 340px */
+  
+        .card-logement-text {
+          position: absolute;
+          color: white;
+          bottom: 15px;
+          left: 15px;
+          width: calc(
+            100% - 110px
+          ); /* Utilisez la largeur de la carte moins la marge */
+          z-index: 1;
+        }
+      }
+    }
+  

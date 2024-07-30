@@ -6,6 +6,8 @@ import About from "./pages/About/About";
 import Error404 from "./pages/Error404/Error404";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import Logement from "./pages/FicheLogement/Logement.jsx";
+
 
 // Utilisation de createRoot pour le rendu de l'application
 const root = createRoot(document.getElementById("root"));
@@ -16,8 +18,8 @@ root.render(
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/logement/:id" element={<Logement />} />
         <Route path="*" element={<Error404 />} />
-
        </Routes>
       <Footer />
     </Router>

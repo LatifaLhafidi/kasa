@@ -4,13 +4,15 @@ import { Link } from "react-router-dom";
 import Banner from "../../components/Banner/Banner";
 import Card from "../../components/Card/Card";
 import image1 from "../../assets/Image source 1.png";
+import "./_Home.scss";
+
 
 function Home() {
   return (
     <div>
       <Banner imageSrc={image1} title="Chez vous, partout et ailleurs" />
 
-      <div>
+      <div className="card-container">  
         {data.map((property) => (
           <Link key={property.id} to={`/logement/${property.id}`}>
             <Card title={property.title} cover={property.cover} />
